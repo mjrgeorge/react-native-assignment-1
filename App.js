@@ -1,5 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function App() {
   return (
@@ -48,6 +52,22 @@ export default function App() {
           </Text>
         </View>
       </View>
+      <View style={styles.iconContainer}>
+        <Feather name="map-pin" size={16} color="black" />
+        <Text style={styles.iconDetail}>San Francisco</Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <Feather name="github" size={16} color="black" />
+        <Text style={styles.iconDetail}>@https://github.blog</Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <Feather name="twitter" size={16} color="black" />
+        <Text style={styles.iconDetail}>Not Available</Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <Feather name="globe" size={16} color="black" />
+        <Text style={styles.iconDetail}>@github</Text>
+      </View>
     </SafeAreaView>
   );
 }
@@ -56,6 +76,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 35,
+    backgroundColor: '#FEFEFE',
+    borderRadius: 10,
   },
   content: {
     flexDirection: 'row',
@@ -89,5 +111,16 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 5,
+    gap: 10,
+    marginBottom: 10,
+  },
+  iconDetail: {
+    marginLeft: 5,
+    fontSize: 16,
   },
 });
